@@ -1,0 +1,509 @@
+
+html, body{
+  min-height: 100%;
+}
+body {
+  font-family: 'Helvetica', arial, sans-serif;
+  background-color: #3D4241;
+	font-size: 15px;
+  }
+  
+.bg {
+  background-color:aliceblue;
+	background-position: center center;
+	background-repeat:  no-repeat;
+	background-attachment: fixed;
+	background-size:  cover;
+}
+.user{
+  text-align: center; 
+  font-weight:600; 
+  margin-top:10px;
+  font-size: 1.6em;
+  margin-top: 100px;
+  margin-bottom: 10px;
+
+}
+.user span{
+  font-weight: 400;
+}
+.logo h1{
+  position: static;
+  padding-left: .3em;
+  color:#0090E1;
+  font-size: 2.5em;
+  font-weight: 750;
+  letter-spacing: -2px;
+}
+.logo span{
+  color: #000000;
+  font-weight: 400;
+  font-size: .8em;
+  letter-spacing:1px;
+  
+}
+p{
+	margin-bottom: 5px;
+	line-height: 1.5em;
+}
+
+h3{
+  padding: 5px 0px 3px 0px;
+  margin-top:5px;
+	margin-bottom: 10px;
+}
+
+.a {
+  color:#008CCA;
+  text-decoration: none;
+  font-weight:bold;
+}
+.a:hover {
+  background-color:#FFFFFF;
+  border-radius:5px;
+  padding:5px;
+}
+
+.header{
+	border: 1px solid #008CCA;
+	padding: 10px;
+	margin: 5px;
+	background: url('img/textures.png');
+	background-color:#008CCA;
+}
+
+.notif{
+	border: none;
+	padding: 2px;
+	margin: 0px 10px;
+	background-color: none;
+	color: red;
+	text-shadow: 2px 2px 6px #424242;
+}
+
+/* Main */
+footer{
+  display: block;
+  margin-top: 80px;
+  padding-bottom: 5px;
+  bottom: 0;
+  width: 100%;
+	text-align: center;
+  font-size: .8em;
+}
+footer i {
+  color:#000000;
+}
+footer a {
+  color:#000000;
+}
+
+.status {
+  position: relative;
+  margin-top:2em;
+  width:400px;
+}
+
+textarea,input,select {
+  background-color: #FDFBFB;
+  border: 1px solid #0090E1;
+  border-radius:8px;
+  text-align:center;
+  font-size: 1.2em;
+  color: #000000;
+  outline: none;
+  width: 90%;
+  height: 50px;
+  box-shadow: -3px 5px 4px rgba(0, 0, 0, 0.2);
+  margin: 8px 0px;
+  
+}
+
+.buttona {
+  background-color: #0090E1;
+  border: 1px solid #0090E1;
+  border-radius:10px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6em;
+  font-weight:bold;
+  cursor: pointer;
+  height: 60px;
+  margin-left:auto;
+  margin-right:auto;
+  width: 400px;
+}
+.buttona:hover{
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.buttonb {
+  position: absolute;
+  left: 0%;
+  top: 95%;
+  background-color: #D20000;
+  border: 1px solid #D20000;
+  border-radius:10px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6em;
+  font-weight:bold;
+  cursor: pointer;
+  height: 60px;
+  opacity: 80%;
+  margin-left:auto;
+  margin-right:auto;  
+  width: 100%;
+
+}
+.buttonb:hover{
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#close{
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  display: none;
+  background-color: rgb(248, 26, 26);
+  border: none;
+  padding: 6px 0px 0px 25px;
+  
+  width: 60px;
+  height: 40px;
+}
+
+/* Style the tab */
+.tab {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 50px; 
+}
+/*Style the buttons inside the tab*/
+div.tab button {
+  border: 1px solid #008CCA;
+  border-radius:8px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.4em;
+  font-weight:600;
+  margin-bottom: 15px;
+  height: 55px;
+  width: 400px;
+}
+/*Style the buttons inside the tab*/
+
+div.tab button:hover {
+  background-color: #008CCA;
+  color: #ffffff;
+}
+
+div.tab button.active {
+  background-color: #008CCA;
+  color: #FFFFFF
+}
+.tabcontent{
+  position: absolute;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+  width: 440px;
+}
+.login-mem{
+  display: none;
+  position: relative;
+  height: 400px;
+  width: 100%;  
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.login-voucher{
+  display: none;
+  position: relative;
+  height: 400px;
+  width: 100%;  
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#how-to-connect{
+  position: absolute;
+  top: 30%;
+  display: none;
+  width: 400px;
+  height: 180px;
+  color: #000000;
+  border: 1px solid #0090E1;
+  border-radius: 5px;
+  padding: 1em;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+table.tstatus {
+  background: #ffffff;
+  width: 100%;
+  color: black;
+  border-spacing: 0;
+  border-collapse: separate;
+  border-radius: 15px;
+  border: 1px solid #BFBFBF;
+  box-shadow: -4px 4px 5px #BFBFBF
+
+}
+table.tstatus>thead>tr:not(:last-child)>th,
+table.tstatus>thead>tr:not(:last-child)>td,
+table.tstatus>tbody>tr:not(:last-child)>th,
+table.tstatus>tbody>tr:not(:last-child)>td,
+table.tstatus>tfoot>tr:not(:last-child)>th,
+table.tstatus>tfoot>tr:not(:last-child)>td,
+table.tstatus>tr:not(:last-child)>td,
+table.tstatus>tr:not(:last-child)>th,
+table.tstatus>thead:not(:last-child),
+table.tstatus>tbody:not(:last-child),
+table.tstatus>tfoot:not(:last-child){
+  border-bottom: 1px solid #ccc;
+}
+
+table.tstatus tr:not(:last-child),
+table.tstatus td:not(:last-child) {
+  padding: 10px;
+  border-right: 1px solid #ccc;
+
+}
+
+table.tpaketwifi {
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+table.tpaketwifi td {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+table.tpaketwifi tr:first-child{
+  background:#008CCA;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+table.tpaketwifi tr:nth-child(even){
+  background-color: #f1f1f1
+}
+
+.modal-window {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.15);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius:5px;
+  
+}
+
+.modal-window:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-window>div {
+  width: 300px;
+  position: relative;
+  margin: 10% auto;
+  padding: 1rem;
+  background: #3D4241;
+  color: #FFFFFF;
+  border-radius:5px;
+}
+
+.modal-window header {
+  font-weight: bold;
+}
+
+.modal-close {
+  color: #ffffff;
+  line-height: 25px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 50px;
+  text-decoration: none;
+  border-top-right-radius:5px;
+  border-bottom-left-radius:5px;
+}
+
+.modal-window h1 {
+  font-size: 150%;
+  margin: 0 0 15px;
+}
+/* promo */
+.promo-title{
+  display: block;
+  margin-top: 60px;
+  margin-left: 100px;
+  padding: 0px;
+}
+.tag{
+  position: absolute;
+  left: 20px;
+  top: 8px;
+  padding: 5px 15px;
+  border-radius: 15px;
+  height: 20px;
+  background-color:rgb(201, 201, 201);
+  font-weight: 600;
+  
+}
+.promo-tab{
+  display: block;
+  width: 100%;
+}
+
+.promo-tab::-webkit-scrollbar{
+  display: none;
+}
+
+.promo-list {
+  display: flex;
+  position: relative;
+  left: 10%;
+}
+
+.promo-list-item{
+  margin: 0px 10px;
+  position: relative;
+  width: 200px;
+  height: 250px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  border: 2px solid #0090E1;
+  overflow: hidden;
+}
+.promo-list-item h3 {
+  margin: 0;
+  text-align: center;
+  position: relative;
+  top: -1%;
+  padding-top: 10px;
+  left:130px;
+  height: 30px;
+  width: 75px;
+  background-color: #0090E1;
+  color: #FFFFFF;
+  border-radius: 5px;
+}
+
+/* layar 850px kebawah */
+@media screen and (max-width: 850px) {
+	
+  div.tab button{
+    width: 90%;
+    float: none;
+  }
+
+  .footer{
+    text-align: center;
+  }
+  .status {
+  width: 90%;
+  float: none;
+	}
+  .buttona {
+    width: 90%;
+    float: none;
+  }
+  .buttonb {
+    width: 100%;
+    float: none;
+  }
+  #KV input{
+    width: 80%;
+    float: none;
+  }
+  #UP input{
+    width: 80%;
+    float: none;
+  }
+  #how-to-connect{
+    width: 90%;
+    float: none;
+  }
+  
+
+}
+
+/*  layar 600px kebawah */
+@media screen and (max-width: 600px) {
+	
+  #KV input{
+    width: 80%;
+    float: none;
+  }
+  #UP input{
+    width: 80%;
+    float: none;
+  }
+  .footer{
+    text-align: center;
+	}
+  .status {
+    width: 90%;
+    float: none;
+	}
+  div.tab button{
+    width: 90%;
+    float: none;
+  }
+
+  #how-to-connect{
+    width: 80%;
+    float: none;
+  }
+  .promo-title{
+    position: relative;
+    right: 80px;
+    top: 45px;
+    font-size: .8em;
+  }
+
+  .promo-tab{
+    margin-top: 50px;
+    overflow-x: auto;
+    
+  }
+  .promo-tab::-webkit-scrollbar{
+    display: none;
+  }
+  .promo-list{
+    display: flex;
+    white-space: nowrap;
+  }
+  .promo-list-item{
+    position: relative;
+    left: 0%;
+    display: inline-block;
+    min-width: 200px;
+    
+  }
+  footer{
+    width: 90%;
+    float: none;
+  }
+}
+
+
+

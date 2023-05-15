@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title id="title"></title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<link rel="icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="data.js"></script>
+</head>
+
+<body class="bg">
+
+<script language="JavaScript">
+
+  function openLogin() {
+    if (window.name != 'hotspot_logout') return true;
+    open('$(link-login)', '_blank', '');
+    window.close();
+    return false;
+  }
+</script>
+<div class="logo">
+  <h1>EA<span class="wifi">wifi</span></h1>
+</div>
+<center>
+  <div id="user" class="user"><span>You Logout,</span> $(username)</div> 
+<div class="status">
+<br>
+  <table class="tstatus" align="center">
+    <tr>
+      <td align="left" style="width:40%; font-weight: 700; padding-left: 20px;">IP</td>
+      <td style="padding-left: 20px;">$(ip)</td>
+    </tr>
+    <tr>
+      <td align="left" style="font-weight: 700; padding-left: 20px;">MAC</td>
+      <td style="padding-left: 20px;">$(mac)</td>
+    </tr>
+    <tr>
+      <td align="left" style="font-weight: 700; padding-left: 20px;">Upload</td>
+      <td style="padding-left: 20px;">$(bytes-in-nice)</td>
+    </tr>
+    <tr>
+      <td align="left" style="font-weight: 700; padding-left: 20px;">Download</td>
+      <td style="padding-left: 20px;">$(bytes-out-nice)</td>
+    </tr>
+    <tr>
+      <td align="left" style="font-weight: 700; padding-left: 20px;">UpTime</td>
+      <td style="padding-left: 20px;">$(uptime)</td>
+    </tr>
+    $(if remain-bytes-total)
+    <tr>
+      <td align="left" style="font-weight: 700; padding-left: 20px;">Bites Left</td>
+      <td style="padding-left: 20px;">$(remain-bytes-total-nice)</td>
+    </tr>
+    $(endif)	  
+    $(if session-time-left)  
+    <tr>
+      <td align="left" style="font-weight: 700; padding-left: 20px;">Time Left</td>
+      <td style="padding-left: 20px;">$(session-time-left)</td>
+    </tr>
+    $(endif)
+  </table>
+  <br>
+    
+  <br>
+
+</div>
+<form action="$(link-login)" name="login" onSubmit="return openLogin()">
+  <input type="submit" class="buttona" value="Login">
+</form>
+</center>
+<script type="text/javascript" >
+        var mydata = JSON.parse(data);
+        var title = document.getElementById('title').innerHTML = mydata[0].nama ;
+</script>
+</body>
+</html>
