@@ -1,0 +1,1 @@
+# mikmon-hotspot-template
