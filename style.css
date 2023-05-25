@@ -103,7 +103,9 @@ footer a {
   margin-top:2em;
   width:400px;
 }
-
+input{
+  display: block;
+}
 textarea,input,select {
   background-color: #FDFBFB;
   border: 1px solid #0090E1;
@@ -133,7 +135,7 @@ textarea,input,select {
   height: 60px;
   margin-left:auto;
   margin-right:auto;
-  width: 400px;
+  width: 90%;
 }
 .buttona:hover{
   box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -171,7 +173,6 @@ textarea,input,select {
   background-color: rgb(248, 26, 26);
   border: none;
   padding: 6px 0px 0px 25px;
-  
   width: 60px;
   height: 40px;
 }
@@ -196,6 +197,7 @@ div.tab button {
   margin-bottom: 15px;
   height: 55px;
   width: 400px;
+  background-color: white;
 }
 /*Style the buttons inside the tab*/
 
@@ -213,7 +215,8 @@ div.tab button.active {
   align-items: center;
   flex-direction: column;
   padding-top: 50px;
-  width: 440px;
+  width: 30%;
+  animation: myAnim 1s ease 0s 1 normal forwards;
 }
 .login-mem{
   display: none;
@@ -353,7 +356,7 @@ table.tpaketwifi tr:nth-child(even){
 /* promo */
 .promo-title{
   display: block;
-  margin-top: 60px;
+  margin-top: 40px;
   margin-left: 100px;
   padding: 0px;
 }
@@ -392,6 +395,7 @@ table.tpaketwifi tr:nth-child(even){
   border-radius: 15px;
   border: 2px solid #0090E1;
   overflow: hidden;
+  animation: myAnim 1s ease 0s 1 normal forwards;
 }
 .promo-list-item h3 {
   margin: 0;
@@ -405,6 +409,26 @@ table.tpaketwifi tr:nth-child(even){
   background-color: #0090E1;
   color: #FFFFFF;
   border-radius: 5px;
+}
+@keyframes myAnim {
+	0% {
+		transform: scale(.7);
+	}
+
+	50% {
+		transform: scale(1);
+	}
+}
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 /* layar 850px kebawah */
@@ -442,7 +466,38 @@ table.tpaketwifi tr:nth-child(even){
     width: 90%;
     float: none;
   }
-  
+  .promo-title{
+    position: relative;
+    right: 80px;
+    top: 45px;
+    font-size: .8em;
+  }
+  .tabcontent{
+    width: 100%;
+  }
+
+  .promo-tab{
+    margin-top: 50px;
+    overflow-x: auto;
+    
+  }
+  .promo-tab::-webkit-scrollbar{
+    display: none;
+  }
+  .promo-list{
+    display: flex;
+    white-space: nowrap;
+  }
+  .promo-list-item{
+    position: relative;
+    left: 0%;
+    min-width: 200px;
+    
+  }
+  footer{
+    width: 100%;
+    float: none;
+  }
 
 }
 
@@ -467,6 +522,9 @@ table.tpaketwifi tr:nth-child(even){
   div.tab button{
     width: 90%;
     float: none;
+  }
+  .tabcontent{
+    width: 100%;
   }
 
   #how-to-connect{
@@ -500,7 +558,7 @@ table.tpaketwifi tr:nth-child(even){
     
   }
   footer{
-    width: 90%;
+    width: 100%;
     float: none;
   }
 }
