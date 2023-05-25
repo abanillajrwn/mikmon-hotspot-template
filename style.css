@@ -216,7 +216,7 @@ div.tab button.active {
   flex-direction: column;
   padding-top: 50px;
   width: 30%;
-  animation: myAnim 1s ease 0s 1 normal forwards;
+  animation: zoomIn 1s ease 0s 1 normal forwards;
 }
 .login-mem{
   display: none;
@@ -410,7 +410,7 @@ table.tpaketwifi tr:nth-child(even){
   color: #FFFFFF;
   border-radius: 5px;
 }
-@keyframes myAnim {
+@keyframes zoomIn {
 	0% {
 		transform: scale(.7);
 	}
